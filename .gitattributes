@@ -61,3 +61,46 @@
 #*.PDF   diff=astextplain
 #*.rtf   diff=astextplain
 #*.RTF   diff=astextplain
+
+# Normalize text files
+* text=auto
+
+# C# and common text assets
+*.cs text diff=csharp
+*.shader text
+*.cginc text
+*.compute text
+*.hlsl text
+*.json text
+*.xml text
+*.yml text
+*.yaml text
+*.md text
+
+# Unity YAML-based assets
+*.meta text
+*.unity text
+*.prefab text
+*.mat text
+*.anim text
+*.controller text
+*.playable text
+*.asset text
+*.physicMaterial2D text
+*.physicsMaterial2D text
+
+# Binary assets
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.tga binary
+*.psd binary
+*.fbx binary
+*.mp3 binary
+*.wav binary
+*.ogg binary
+*.mp4 binary
+*.mov binary
+*.zip binary
+*.7z binary
