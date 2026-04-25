@@ -3,8 +3,8 @@ using UnityEngine;
 public class PaddleMovement : MonoBehaviour
 {
     public float speed = 5f; // Speed of the paddle movement
-    public float minX = -2f;// Minimum X position for the paddle
-    public float maxX = 2f; // Maximum X position for the paddle
+    public float minX = -4.5f;
+    public float maxX = 4.5f;
 
     private void Update()
     {
