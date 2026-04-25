@@ -8,8 +8,7 @@ public class BallMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        rb.gravityScale = 0f;
-        rb.linearVelocity = new Vector2(1f, 0.63f).normalized * speed;
+        rb.linearVelocity = new Vector2(1, 1).normalized * speed;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
