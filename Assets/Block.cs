@@ -11,6 +11,7 @@ public class Block : MonoBehaviour
             GameController.Instance.IncrementCombo();
             int points = BasePoints * GameController.Instance.GetCombo();
             GameController.Instance.AddScore(points);
+            Invoke("CheckWinDelay", 0.1f);
             Destroy(gameObject);
         }
     }

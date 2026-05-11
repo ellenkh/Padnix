@@ -12,6 +12,8 @@ public class GameController : MonoBehaviour
     public TextMeshProUGUI ScoreText;
     public GameObject GameOverPanel;
     public TextMeshProUGUI FinalScoreText;
+    public GameObject WinPanel;
+    public TextMeshProUGUI WinScoreText;
 
     public Image[] Hearts;
     public Sprite HeartFull;
@@ -70,6 +72,20 @@ public class GameController : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadScene(
             UnityEngine.SceneManagement.SceneManager.GetActiveScene().name
         );
+    }
+    public void CheckWin()
+    {
+        if (GameObject.FindGameObjectsWithTag("Block").Length == 0)
+        {
+            WinPanel.SetActive(true);
+            WinScoreText.text = "Score: " + currentScore;
+        }
+    }
+    public void AddScore(int points)
+    {
+        currentScore += points;
+        UpdateScoreUI();
+        Invoke("CheckWin", 0.1f);
     }
     void GameOver()
     {
