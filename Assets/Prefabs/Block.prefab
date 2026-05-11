@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 206977169946353588}
   m_Layer: 0
   m_Name: Block
-  m_TagString: Untagged
+  m_TagString: Block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -151,4 +151,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2c5abf85156d5b4ba902c5357573984, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Block
-  Points: 10
+  BasePoints: 10

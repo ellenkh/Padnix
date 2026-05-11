@@ -107,11 +107,6 @@ public class GameController : MonoBehaviour
                 Hearts[i].sprite = HeartEmpty;
         }
     }
-    public void AddScore(int points)
-    {
-        currentScore += points;
-        UpdateScoreUI();
-    }
 
     void UpdateScoreUI()
     {
