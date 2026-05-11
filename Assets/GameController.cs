@@ -18,6 +18,7 @@ public class GameController : MonoBehaviour
 
     private int currentScore;
     private int currentLives;
+    private int currentCombo;
 
     void Awake()
     {
@@ -27,6 +28,7 @@ public class GameController : MonoBehaviour
     void Start()
     {
         currentLives = MaxLives;
+        currentCombo = 0;
         currentScore = 0;
         UpdateScoreUI();
         UpdateHeartsUI();
@@ -47,6 +49,20 @@ public class GameController : MonoBehaviour
         {
             Invoke("SpawnBall", 1f); // Liten pause før respawn
         }
+    }
+    public void IncrementCombo()
+    {
+        currentCombo++;
+    }
+
+    public void ResetCombo()
+    {
+        currentCombo = 0;
+    }
+
+    public int GetCombo()
+    {
+        return currentCombo;
     }
 
     void SpawnBall()
