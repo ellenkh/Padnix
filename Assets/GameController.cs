@@ -10,7 +10,8 @@ public class GameController : MonoBehaviour
     public Transform BallSpawnPoint;
     public int MaxLives = 3;
     public TextMeshProUGUI ScoreText;
-
+    public GameObject GameOverPanel;
+    public TextMeshProUGUI FinalScoreText;
 
     public Image[] Hearts;
     public Sprite HeartFull;
@@ -42,8 +43,7 @@ public class GameController : MonoBehaviour
 
         if (currentLives <= 0)
         {
-            Debug.Log("Game Over!");
-            // Vi legger til game over-skjerm senere
+            GameOver();
         }
         else
         {
@@ -65,6 +65,17 @@ public class GameController : MonoBehaviour
         return currentCombo;
     }
 
+    public void RestartGame()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(
+            UnityEngine.SceneManagement.SceneManager.GetActiveScene().name
+        );
+    }
+    void GameOver()
+    {
+        GameOverPanel.SetActive(true);
+        FinalScoreText.text = "Score: " + currentScore;
+    }
     void SpawnBall()
     {
         Instantiate(BallPrefab, BallSpawnPoint.position, Quaternion.identity);
